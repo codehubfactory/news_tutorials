@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
-          listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
+          // listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
           appBarTheme: AppBarTheme(
               centerTitle: true, backgroundColor: Colors.transparent)),
       home: const MyHomePage(),

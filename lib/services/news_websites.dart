@@ -9,7 +9,14 @@ List<String> website_urls=[
   "www.haberturk.com/rss/kategori/kadin.xml"
 ];
 
-Enum news_sitesVal{
+enum news_sitesVal{
   ekonomi,
+  spor,
+  teknoloji,
+  kadin
+}
+
+extension WebSiteSelection on news_sitesVal{
 
 }
+
