@@ -17,6 +17,8 @@ enum news_sitesVal{
 }
 
 extension WebSiteSelection on news_sitesVal{
-
+  // String web_url(){
+  //   return website_urls[news_sitesVal.ekonomi]//** */
+  // }
 }
 
