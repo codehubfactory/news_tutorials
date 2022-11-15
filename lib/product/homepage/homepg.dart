@@ -15,25 +15,30 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              NavigCont(),
-              NavigCont(),
-              NavigCont(),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              NavigCont(),
-              NavigCont(),
-              NavigCont(),
-            ],
-          )
-        ],
+        children: [rowmethod(), rowmethod()],
       ),
+    );
+  }
+
+  Row rowmethod() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        NavigCont(
+          name: "aa",
+          tappedFunc: () {
+            print("object");
+          },
+        ),
+        NavigCont(
+          name: "aa",
+          tappedFunc: () {},
+        ),
+        NavigCont(
+          name: "aa",
+          tappedFunc: () {},
+        ),
+      ],
     );
   }
 }
