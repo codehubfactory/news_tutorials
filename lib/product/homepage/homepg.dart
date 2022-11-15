@@ -19,17 +19,13 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              NavigCont(),
-              NavigCont(),
-              NavigCont(),
+              NavigCont(name: "sudemmm",tappedFunc: (){},),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              NavigCont(),
-              NavigCont(),
-              NavigCont(),
+              NavigCont(name: "sudemmm",tappedFunc: (){},),
             ],
           )
         ],

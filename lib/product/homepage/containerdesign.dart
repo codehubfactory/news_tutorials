@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class NavigCont extends StatefulWidget {
+  /***
+   * [name] ismi model den gelen verileri almalı 
+   * [tappedFunc] doşarıdan gelen func tion alabilir 
+   * 
+   */
   const NavigCont({Key? key, required this.name, required this.tappedFunc}) : super(key: key);
   final String name;
   final Function() tappedFunc;
