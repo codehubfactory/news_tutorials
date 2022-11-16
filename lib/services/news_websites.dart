@@ -1,12 +1,10 @@
-
-
-String haberturk_rss="https://www.haberturk.com/rss/anasayfa";
+String haberturk_rss="www.haberturk.com";
 
 List<String> website_urls=[
-  "www.haberturk.com/rss/ekonomi.xml",
-  "www.haberturk.com/rss/spor.xml",
-  "www.haberturk.com/rss/kategori/teknoloji.xml",
-  "www.haberturk.com/rss/kategori/kadin.xml"
+  "/rss/ekonomi.xml",
+  "/rss/spor.xml",
+  "/rss/kategori/teknoloji.xml",
+  "/rss/kategori/kadin.xml"
 ];
 
 enum news_sitesVal{
