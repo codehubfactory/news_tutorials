@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //NewsApi().http_get(news_sitesVal.kadin); ile ekonomi bilgilerini çekebilirsiniz
   //NewsApi().http_get(news_sitesVal.ekonomi); ile ekonomi bilgilerini çekebilirsiniz
 
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +29,9 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               NavigCont(
                 name: "aa",
-                tappedFunc: () {},
+                tappedFunc: () {
+                  NewsApi().http_get(news_sitesVal.ekonomi);
+                },
               ),
               NavigCont(
                 name: "aa",
