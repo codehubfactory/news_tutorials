@@ -28,10 +28,11 @@ class NewsApi {
         xml_parser.XmlDocument.from(my_val.body.toString(), parseCharacterEntities: false);
 
 
-      final channel = hackerNews?.getElements('channel');
-      // final channel = hackerNews?.getElement('channel')?.getElement('item')?.getElement("title")?.text?.replaceAll("<![CDATA[","").replaceAll("]]>", "");
+      // final channel = hackerNews?.getElements('channel');
+      // final channel = hackerNews?.getElement('channel')?.getElement('item')?.getElement("description")?.text?.replaceAll("<![CDATA[","").replaceAll("]]>", "");
+      final channel = hackerNews?.getElement('channel')?.getElement('item')?.getElement("description")?.getChildren("alt");
 
-        print(hackerNews.toString());
+        // print(hackerNews.toString());
         print(channel.toString());
     return Future.value(-1);
   }
