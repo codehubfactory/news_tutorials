@@ -21,28 +21,28 @@ class NewsApi {
     final val =Xml2Json();
     final hackerNews =
         xml_parser.XmlDocument.from(my_val.body.toString(), parseCharacterEntities: false);
-
-    
-
-      // final channel =  hackerNews?.getElement('channel')?.getChildren("item")?[0].getElement("title");
-      final channel =  hackerNews?.getElement('channel')?.getChildren("item");
-
-    //   print(xml_parser.XmlCdata.parseString(channel!.text));
-      // final title = (children: channel, name: 'title');
-       
-      // final channel = hackerNews?.getElement('channels')?.getElement('item')?.getElement("description")?.getChildren("alt");
-        // print(hackerNews);
-        // print(hackerNews.toString());
-        // print(title.children!.first);
+        
         val.parse(my_val.body.toString());
-        // val.parse();
-        print("object");
         dynamic valjson=jsonDecode(val.toGData());
         print(valjson["rss"]["channel"]["item"][0]["image"]["__cdata"]);
-        // print(channel.text);
+        print(valjson["rss"]["channel"]["item"][0]);
     return Future.value(-1);
   }
   
 
 
 }
+
+
+/**
+ * 
+ * old script
+ *   // final channel =  hackerNews?.getElement('channel')?.getChildren("item")?[0].getElement("title");
+      final channel =  hackerNews?.getElement('channel')?.getChildren("item");
+
+    //   print(xml_parser.XmlCdata.parseString(channel!.text));
+      // final title = (children: channel, name: 'title');
+       
+      // final channel = hackerNews?.getElement('channels')?.getElement('item')?.getElement("description")?.getChildren("alt");
+    
+ */
