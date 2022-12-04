@@ -17,7 +17,8 @@ class NewsApi {
     print(website_url.web_url.toString());
 
     final my_val = await http.get(Uri.http(haberturk_rss.toString(), "/rss/ekonomi.xml"));
-
+    if (my_val is http.Response){
+      
     final val =Xml2Json();
     final hackerNews =
         xml_parser.XmlDocument.from(my_val.body.toString(), parseCharacterEntities: false);
@@ -25,7 +26,10 @@ class NewsApi {
         val.parse(my_val.body.toString());
         dynamic valjson=jsonDecode(val.toGData());
         print(valjson["rss"]["channel"]["item"][0]["image"]["__cdata"]);
-        print(valjson["rss"]["channel"]["item"][0]);
+        print(valjson["rss"]["channel"]["item"][0]["description"]["__cdata"]);
+
+    }
+
     return Future.value(-1);
   }
   
