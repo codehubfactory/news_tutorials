@@ -28,6 +28,14 @@ class NewsApi {
         // jsonseriziable eklemek gerekli, daha pratik kullanım için...
         dynamic valjson=jsonDecode(val.toGData());
 
+        /**
+         * to do 
+         * website_model.dart file WebSitePage added 
+         * and decode with valjson for our models
+         * you must create from come val
+         * 
+         */
+
         print(channel.items![0].title.toString());
 
         print(valjson["rss"]["channel"]["item"][0]["image"]["__cdata"]);

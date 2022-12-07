@@ -1,6 +1,10 @@
 class WebSitePage {
   String? websiteInfo;  
   Channel? channel;
+
+  factory WebSitePage.crateVal(){
+    
+  }
 }
 
 class Channel {
