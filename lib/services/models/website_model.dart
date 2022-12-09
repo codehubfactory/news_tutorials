@@ -1,13 +1,19 @@
 class WebSitePage {
-  String? websiteInfo;  
-  Channel? channel;
+  final String? websiteInfo;  
+  final Channel? channel;
 
   factory WebSitePage.crateVal(){
-    
+    return WebSitePage();
   }
+
+  WebSitePage({this.websiteInfo, this.channel});
 }
 
 class Channel {
+
+  final List<Items> listItem;
+
+  Channel(this.listItem);
   
 }
 
